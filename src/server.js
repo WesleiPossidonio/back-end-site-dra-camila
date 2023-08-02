@@ -4,15 +4,14 @@ import express from 'express'
 import cors from 'cors'
 dotenv.config()
 
-const port = 4000
+const port = 4001
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 
 app.get('/token', (request, response) => {
-    const token = process.env.LIST_TOKEN
-    return response.json({token: token})
+    return response.json({token: process.env.LIST_TOKEN})
 })
 
 app.listen(port)
