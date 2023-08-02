@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/token', (request, response) => {
-    const token = process.env.TOKEN
+    const token = process.env.LIST_TOKEN
     console.log(token)
     return response.json({token: token})
 })
