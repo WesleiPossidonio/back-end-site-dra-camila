@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/token', (request, response) => {
-    return response.json({token: process.env.LIST_TOKEN})
+    return response.json({token: process.env.TOKEN})
 })
 
 app.listen(port)
